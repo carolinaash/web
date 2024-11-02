@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instalaciones del Colegio</title>
+    <link rel="stylesheet" href="instalaciones.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Instalaciones del Colegio</h1>
+            <button class="image-button" onclick="showImage()">Mostrar Imagen</button>
+        </header>
+
+        <nav class="nav-left">
+            <ul>
+                <li><a href="inicio.html">Menú</a></li>
+                <li><a href="oferta.html">Oferta Académica</a></li>
+                <li><a href="menu.html">Página de Inicio</a></li>
+                <li><a href="acercade.html">Acerca de nosotros</a></li>
+            </ul>
+        </nav>
+
+        <nav class="nav-right">
+            <ul>
+                <li><a href="promo.html">Promo 2024</a></li>
+                <li><a href="contactenos.html">Contáctenos</a></li>
+            </ul>
+        </nav>
+
+        <div id="imageSection" class="hidden">
+            <img src="imgs/logofdr.jpg" alt="Imagen de ejemplo">
+            <h2>Colegio FDR</h2>
+        </div>
+
+        <section class="table-section">
+            <table class="rounded-table">
+                <tr>
+                    <td>
+                        <img src="imgs/biblio.jpg" alt="Biblioteca">
+                        <h3>Biblioteca</h3>
+                        <p>Instalación acondicionada en donde puedes ir a leer, recibir charlas, clases o avanzar a proyectos.</p>
+                    </td>
+                    <td>
+                        <img src="imgs/teatro.jpg" alt="Teatro">
+                        <h3>Teatro griego</h3>
+                        <p> Es un espacio bastante amplio en donde juegan, hacemos eventos, celebraciones</p>
+                    </td>
+                    <td>
+                        <img src="imgs/huerto.jpg" alt="Aula">
+                        <h3>Aula</h3>
+                        <p>Zona donde plantamos y realizamos actividades de TES.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="imgs/cafeteria.jpg" alt="Cafetería">
+                        <h3>Cafetería</h3>
+                        <p>Área para estudiantes con comida saludable y variada, en donde hay mesas para que cada estudiante coma a gusto.</p>
+                    </td>
+                    
+                        
+                    
+                </tr>
+            </table>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Instalaciones del Colegio, AH</p>
+        </footer>
+    </div>
+
+    <script>
+        function showImage() {
+            const imageSection = document.getElementById('imageSection');
+            imageSection.classList.toggle('hidden');
+        }
+
+        function getRandomLightColor() {
+            const letters = 'BCDEF'; 
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * letters.length)];
+            }
+            return color;
+        }
+
+        window.onload = function () {
+            const cells = document.querySelectorAll('.rounded-table td');
+            cells.forEach(cell => {
+                cell.style.backgroundColor = getRandomLightColor();
+            });
+        };
+    </script>
+</body>
+</html>

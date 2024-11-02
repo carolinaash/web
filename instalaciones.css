@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: url('imgs/fdr.jpg');
+    background-size: cover;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.2); 
+    padding: 20px;
+    border-radius: 15px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    position: relative; 
+}
+
+header {
+    text-align: center;
+    background: url('imgs/porton.jpg') no-repeat center center; 
+    background-size: cover; 
+    color: #fff;
+    padding: 20px 0;
+    border-radius: 12px 12px 0 0;
+    position: sticky; /* Header flotante */
+    top: 0; /* Mantenerlo en la parte superior */
+    z-index: 2; 
+}
+
+header h1 {
+    font-size: 2.8rem;
+    color: #ffeb3b; 
+    animation: glow 1.7s infinite alternate; /* Animación de resplandor */
+    position: relative; /* Para que el z-index funcione */
+    z-index: 2; /* Asegura que esté por encima del pseudo-elemento */
+}
+
+.image-button {
+    background-color: rgba(96, 130, 182, 0.8);
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.image-button:hover {
+    background-color: #003f7f;
+}
+
+.hidden {
+    display: none;
+}
+
+#imageSection {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#imageSection img {
+    max-width: 400px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.table-section {
+    text-align: center;
+}
+
+.rounded-table {
+    width: 100%;
+    margin: auto;
+    border-collapse: separate;
+    border-spacing: 15px;
+}
+
+.rounded-table td {
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.rounded-table td img {
+    max-width: 150px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.rounded-table td h3 {
+    margin-top: 10px;
+    color: #007BFF;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    background-color: #0056b3;
+    color: white;
+    border-radius: 0 0 8px 8px;
+    background-color: rgba(96, 130, 182, 0.8);
+}
+
+nav {
+    width: 200px;
+    margin: 20px 0;
+    position: relative;
+ transition: transform 0.3s ease;
+    animation: float 2s ease-in-out infinite;
+
+}
+nav:hover {
+    transform: scale(1.05);
+}
+.nav-left {
+    float: left; 
+}
+
+.nav-right {
+    float: right; 
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: none;
+    color: #ffeb3b;
+}
+
+.nav-left {
+    background-color: rgba(96, 130, 182, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.nav-right {
+    background-color: rgba(96, 130, 182, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+}
